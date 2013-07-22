@@ -12,4 +12,10 @@ gradle::task { 'hello world':
 	task => 'helloWorld'
 }
 
+file { 'etgradle':
+	path    => '/usr/bin/etgradle',
+	content => 'gradle -b /opt/tools/gradle/build.gradle $*;',
+	mode    => 755
+}
+
 notify{ "Deploying version ${deploy_version} ...": }

@@ -11,3 +11,5 @@ Gradle::Task {
 gradle::task { 'hello world':
 	task => 'helloWorld'
 }
+
+notify{ "Deploying version ${deploy_version} ...": }

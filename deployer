@@ -1,0 +1,2 @@
+DEPLOY_VERSION=$1
+vagrant $2

@@ -17,7 +17,10 @@ Vagrant.configure("2") do |config|
       puppet.module_path    = "modules"
       puppet.manifests_path = "manifests"
       puppet.manifest_file = "jboss.pp"
+
+      puppet.facter = {
+        "deploy_version" => ENV['DEPLOY_VERSION']
+      }
     end
   end
-
 end

@@ -1,0 +1,11 @@
+task wrapper(type: Wrapper) {
+    gradleVersion = '1.6'
+}
+
+task helloWorld() {
+    println "Hello World!"
+
+    def gradleFile = new File('/home/vagrant/gradletest.txt').withWriter { out -> 
+    	out.println new Date().getDateTimeString()
+    }
+}

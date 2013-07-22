@@ -1,0 +1,7 @@
+task wrapper(type: Wrapper) {
+    gradleVerison = '1.6'
+}
+
+task helloWorld() {
+    println "Hello World!"
+}
